@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menuDashboard"
+        android:title="@string/dashboard"
+        android:icon="@drawable/ic_dashboard"/>
+    <item
+        android:id="@+id/menuPesan"
+        android:title="@string/pesan"
+        android:icon="@drawable/ic_mail_box"/>
+    <item
+        android:id="@+id/menuNotifikasi"
+        android:title="@string/notikasi"
+        android:icon="@drawable/ic_notification_with_vawes"
+        app:actionProviderClass="com.example.navigation.CustomActionProvider"
+        android:actionLayout="@layout/menu_notikasi_layout"
+/>
+    <item
+        android:id="@+id/menuKalendar"
+        android:title="@string/kalendar"
+        android:icon="@drawable/ic_sticky_note_1"/>
+    <item
+        android:id="@+id/menuStatistik"
+        android:title="@string/Statistik"
+        android:icon="@drawable/ic_stats"/>
+    <item
+        android:id="@+id/menuPengaturan"
+        android:title="@string/pengaturan"
+        android:icon="@drawable/ic_settings"/>
+    <item
+        android:title="">
+        <menu>
+            <item
+                android:title="@string/gandi_mode_gelap"
+                app:actionLayout="@layout/switch_layout"
+                app:showAsAction="always"
+                android:id="@+id/checkable_menu"
+                android:checkable="true"
+                />
+            <!--                app:actionViewClass="android.widget.Switch"-->
+            <!--                android:orderInCategory="80"-->
+            <!--                app:showAsAction="always"-->
+
+        </menu>
+
+    </item>
+
+</menu>

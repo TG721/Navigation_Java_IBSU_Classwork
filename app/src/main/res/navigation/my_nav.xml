@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/dashboardFragment">
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.navigation.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/pestanFragment"
+        android:name="com.example.navigation.PesanFragment"
+        android:label="fragment_pestan"
+        tools:layout="@layout/fragment_pestan" />
+    <fragment
+        android:id="@+id/kalendarFragment"
+        android:name="com.example.navigation.KalendarFragment"
+        android:label="fragment_kalendar"
+        tools:layout="@layout/fragment_kalendar" />
+    <fragment
+        android:id="@+id/notikasiFragment"
+        android:name="com.example.navigation.NotifikasiFragment"
+        android:label="fragment_notikasi"
+        tools:layout="@layout/fragment_notikasi" />
+    <fragment
+        android:id="@+id/pengaturanFragment"
+        android:name="com.example.navigation.PengaturanFragment"
+        android:label="fragment_pengaturan"
+        tools:layout="@layout/fragment_pengaturan" />
+    <fragment
+        android:id="@+id/statistikFragment"
+        android:name="com.example.navigation.StatistikFragment"
+        android:label="fragment_statistik"
+        tools:layout="@layout/fragment_statistik" />
+</navigation>

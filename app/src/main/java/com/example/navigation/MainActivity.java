@@ -92,23 +92,21 @@ public class MainActivity extends AppCompatActivity {
         });
         toggleButtonGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
                 DrawerLayout drawerLayout = binding.drawerLayout;
                 View header = binding.navigationView.getHeaderView(0);
-                RadioGroup toggleButtonGroup = header.findViewById(R.id.toggle);
-                RadioButton checkedButton = (RadioButton) toggleButtonGroup.findViewById(radioGroup.getId());
-                checkedButton.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.white));
                 for (int j = 0; j < toggleButtonGroup.getChildCount(); j++) {
                     int currentChildID = toggleButtonGroup.getChildAt(j).getId();
-                    if (currentChildID != radioGroup.getId()) {
-                        RadioButton currentButton = toggleButtonGroup.findViewById(currentChildID);
+                    RadioButton currentButton = toggleButtonGroup.findViewById(currentChildID);
+                    if (currentChildID == checkedId) {
+                        currentButton.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.white));
+                    } else {
                         currentButton.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
                     }
                 }
-
             }
-
         });
+
     }
 
 }
